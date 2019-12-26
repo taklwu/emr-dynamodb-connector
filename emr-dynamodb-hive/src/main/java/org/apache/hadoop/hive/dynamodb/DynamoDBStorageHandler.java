@@ -212,7 +212,7 @@ public class DynamoDBStorageHandler
     }
   }
 
-  private void configureInputJobCredentials(TableDesc tableDesc, Map<String, String> secrets) {
+  public void configureInputJobCredentials(TableDesc tableDesc, Map<String, String> secrets) {
     throw new AbstractMethodError("configureInputJobCredentials not supported");
   }
 
