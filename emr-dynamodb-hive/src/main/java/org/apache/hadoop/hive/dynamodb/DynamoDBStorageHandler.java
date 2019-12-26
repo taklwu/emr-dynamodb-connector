@@ -212,6 +212,10 @@ public class DynamoDBStorageHandler
     }
   }
 
+  private void configureInputJobCredentials(TableDesc tableDesc, Map<String, String> secrets) {
+    throw new AbstractMethodError("configureInputJobCredentials not supported");
+  }
+
   private void useExplicitThroughputIfRequired(Map<String, String> jobProperties, TableDesc tableDesc) {
     String userRequiredReadThroughput = tableDesc.getProperties().getProperty(DynamoDBConstants.READ_THROUGHPUT);
     if (userRequiredReadThroughput != null) {
